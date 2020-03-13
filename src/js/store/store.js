@@ -1,6 +1,5 @@
 import thunk from 'redux-thunk';
 import firebase from 'firebase';
-
 import { createStore, applyMiddleware, compose } from 'redux';
 import { reduxFirestore, getFirestore } from 'redux-firestore';
 import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
@@ -11,15 +10,16 @@ const rrfConfig = {
     userProfile:'users',
     enableLogging:true,
     useFirestoreForProfile:true
-}
-firebase.initializeApp(config)
+};
+
+firebase.initializeApp(config);
 
 const store = createStore(
     rootReducer,
     compose(
-        applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore})),
         reduxFirestore(firebase),
-        reactReduxFirebase(firebase, rrfConfig)
+        reactReduxFirebase(firebase, rrfConfig),
+        applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore})),
     )
 );
 

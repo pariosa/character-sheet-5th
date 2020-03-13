@@ -20,8 +20,8 @@ class RegisterButton extends Component {
     render(){
         const { toggleRegisterModal }= this.props;
         return(
-            <div className="registerButton right menu">
-                <a  className="ui item">
+            <div className="registerButton right menu"  >
+                <a  className="ui item" onClick={toggleRegisterModal}>
                     Register
                 </a>
             </div>

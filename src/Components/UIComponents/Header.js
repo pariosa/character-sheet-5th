@@ -17,19 +17,23 @@ class Header extends Component{
         this.props = props;
     }
     render(){
-        const {auth}= this.props;
-        const {button1} = auth.uid ? null : <LoginButton />
-        const {button2} = auth.uid ?  <LogoutButton /> : <RegisterButton />
+        const { auth }= this.props;
+        const button1 = auth.uid ? null : <LoginButton />;
+        const button2 = auth.uid ?  <LogoutButton /> : <RegisterButton />;
 
-        const drawerToggle = auth ? <DrawerToggle/> :null;
+        const drawerToggle = auth.uid ? <DrawerToggle/> :null;
         return(
             <div>
                 <div className="ui Header">
                     Character sheet 5e
                 </div>
                 {drawerToggle}
-                {button1}
-                {button2}
+                <div>
+                    { button1 }
+                </div>
+                <div>
+                    { button2 } 
+                </div>
             </div>
         )
     }

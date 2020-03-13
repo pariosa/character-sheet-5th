@@ -40,34 +40,34 @@ class RegisterModal extends Component{
         }
         return(
             <div>
-                <Backdrop />
+                <Backdrop type="registerModal" />
 
-                <div clasName="registerModal modal">
+                <div className="registerModal modal">
                     <div className="header">
                         Register
                     </div>
                     <form onSubmit={this.handleSubmit}>
 
                     <div className="field">
-								<div class="ui left icon input">
+								<div className="ui left icon input">
 									<input id="username" type="text"  onChange={this.handleChange} placeholder="Username" />
 									<i className="user icon"></i>
 								</div>
 							</div>
 							<div className="field">
-								<div class="ui left icon input">
+								<div className="ui left icon input">
 									<input id="email" type="email"  onChange={this.handleChange}  placeholder="Email Address" />
 									<i className="at icon"></i>
 								</div>
 							</div>
 							<div className="field">
-								<div class="ui left icon input"> 
+								<div className="ui left icon input"> 
 									<input type="password" id="password" name="password" className="" onChange={this.handleChange} placeholder="Password" />
 									<i className="key icon"></i>
 								</div>
 							</div>
 							<div className="field">
-								<div class="ui left icon input">
+								<div className="ui left icon input">
 									<input type="password" id="passwordVerify" name="password" className="" onChange={this.handleChange} placeholder="Verify Password" />
 									<i className="lock icon"></i>
 								</div>

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-
 import { toggleLoginModal } from '../../js/actions/uiActions';
 import { connect } from 'react-redux';
 
@@ -20,10 +18,10 @@ class LoginButton extends Component {
         this.props = props;
     }
     render(){
-        const { toggleLoginModal }= this.props;
+        const { toggleLoginModal } = this.props;
         return(
             <div className="loginButton right menu">
-                <a  className="ui item">
+                <a  className="ui item"  onClick={toggleLoginModal}>
                     Login
                 </a>
             </div>

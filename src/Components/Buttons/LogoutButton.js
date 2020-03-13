@@ -3,7 +3,7 @@ import { logout } from "../../js/actions/authActions"
 import { connect } from 'react-redux';
 
  
-const mapDispatchToProps =dispatch => {
+const mapDispatchToProps = dispatch => {
     return {
         logout: () => dispatch(logout())
     }
@@ -15,13 +15,15 @@ class LogoutButton extends Component {
         this.props = props;
     }
     render(){ 
+
+        const {logout} = this.props
         return(
             <div className="loginButton right menu">
-                <a  className="ui item">
+                <a  className="ui item" onClick={logout}>
                     Logout
                 </a>
             </div>
         )
     }
 }
-export default connect(mapDispatchToProps)(LogoutButton)
+export default connect(null,mapDispatchToProps)(LogoutButton)

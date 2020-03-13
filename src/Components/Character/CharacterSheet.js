@@ -3,7 +3,8 @@ import Traits from "../Traits/Traits";
 import css from '../../css/CharacterSheet.css'
 import Header from "../UIComponents/Header";
 import SideDrawer from '../UIComponents/SideDrawer';
-
+import RegisterModal from '../Modals/RegisterModal';
+import LoginModal from '../Modals/LoginModal';
 class CharacterSheet extends Component{
     constructor(props){
         super(props);
@@ -16,7 +17,8 @@ class CharacterSheet extends Component{
             <div className="CharacterSheet">
                 
                 <Traits/>
-
+                <RegisterModal/>
+                <LoginModal/>
             { sideDrawer }
             </div>
         )

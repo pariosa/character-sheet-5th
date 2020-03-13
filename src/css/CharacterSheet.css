@@ -1,5 +1,5 @@
 .Header{
-    position:fixed;
+    /* position:fixed; */
     width:100%;
     background-color:#fff!important;
     z-index:2;
@@ -10,8 +10,13 @@
     padding:20px;
     margin: 0 auto; 
 } 
-    
-
+.registerButton.right.menu {  
+   margin-left:300px;
+}
+.loginButton.right.menu {  
+  margin-left:300px;
+ 
+}
 /* backdrop classes */
 
 .Backdrop{
