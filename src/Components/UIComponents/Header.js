@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import DrawerToggle from './DrawerToggle';
+import RegisterButton from '../Buttons/RegisterButton';
+import LoginButton from '../Buttons/LoginButton';
+import LogoutButton from '../Buttons/LogoutButton';
 
 const mapStateToProps = (state)=>{
     return {
-        auth:true
+        auth: state.firebase.auth
     }
 }
 
@@ -15,6 +18,9 @@ class Header extends Component{
     }
     render(){
         const {auth}= this.props;
+        const {button1} = auth.uid ? null : <LoginButton />
+        const {button2} = auth.uid ?  <LogoutButton /> : <RegisterButton />
+
         const drawerToggle = auth ? <DrawerToggle/> :null;
         return(
             <div>
@@ -22,6 +28,8 @@ class Header extends Component{
                     Character sheet 5e
                 </div>
                 {drawerToggle}
+                {button1}
+                {button2}
             </div>
         )
     }
