@@ -18,3 +18,14 @@ export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS"
 
 //get characters actions 
 export const GET_CHARACTERS = "GET_CHARACTERS"
+
+//character actions
+
+export const UPDATE_NAME = "UPDATE_NAME"
+export const UPDATE_CLASS = "UPDATE_CLASS"
+export const UPDATE_LEVEL = "UPDATE_LEVEL"
+export const UPDATE_PLAYER_NAME = "UPDATE_PLAYER_NAME"
+export const UPDATE_RACE = "UPDATE_RACE"
+export const UPDATE_ALIGNMENT = "UPDATE_ALIGNMENT"
+export const UPDATE_EXPERIENCE  = "UPDATE_EXPERIENCE"
+export const UPDATE_EXPERIENCE_NEXT_LEVEL = "UPDATE_EXPERIENCE_NEXT_LEVEL" 

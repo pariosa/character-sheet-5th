@@ -5,6 +5,7 @@ import Header from "../UIComponents/Header";
 import SideDrawer from '../UIComponents/SideDrawer';
 import RegisterModal from '../Modals/RegisterModal';
 import LoginModal from '../Modals/LoginModal';
+import CharacterInfo from './CharacterInfo';
 class CharacterSheet extends Component{
     constructor(props){
         super(props);
@@ -15,7 +16,7 @@ class CharacterSheet extends Component{
         const sideDrawer = <SideDrawer />
         return(
             <div className="CharacterSheet">
-                
+                <CharacterInfo/>
                 <Traits/>
                 <RegisterModal/>
                 <LoginModal/>

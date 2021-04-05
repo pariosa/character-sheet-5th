@@ -4,6 +4,7 @@ import { firebaseReducer } from 'react-redux-firebase'
 import traitsReducer from './traitsReducer';
 import uiReducer from './uiReducer';
 import authReducer from './authReducer';
+import characterReducer from './characterReducer';
 
 const reducers = {
     firebase: firebaseReducer,
@@ -11,6 +12,7 @@ const reducers = {
     traits:traitsReducer,
     ui:uiReducer,
     auth:authReducer,
+    character:characterReducer,
 }
 
 const reducer = combineReducers(reducers);
